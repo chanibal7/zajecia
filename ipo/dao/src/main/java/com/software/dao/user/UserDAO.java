@@ -10,7 +10,7 @@
  *           <br/>
  \*           andrzej.piechocki@software.com
  *
- *  Created: 2023-02-20
+ *  Created: 2023-12-20
  *
  *****************************************************/
 package com.software.dao.user;
