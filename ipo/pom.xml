@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>com.software</groupId>
+   <artifactId>zajecia</artifactId>
+   <packaging>pom</packaging>
+   <version>1.2-SNAPSHOT</version>
+   <description>Includes all required sub modules to build the project</description>
+
+	<properties>
+		<spring.version>4.0.5.RELEASE</spring.version>
+		<spring-security.version>3.2.5.RELEASE</spring-security.version>
+		<spring-data.version>1.7.1.RELEASE</spring-data.version>
+		<zajecia.version>1.2-SNAPSHOT</zajecia.version>
+		<com.fasterxml.jackson.core.version>2.5.1</com.fasterxml.jackson.core.version>
+		<tiles.version>3.0.5</tiles.version>
+		<commons-lang.version>3.3.2</commons-lang.version>
+		<log4j.version>1.2.17</log4j.version>
+		<quartz.version>2.2.0</quartz.version>
+		<querydsl.version>3.6.2</querydsl.version>
+        <hibernate.version>4.3.8.Final</hibernate.version>
+		<env>dev</env>
+	</properties>
+
+   <modules>
+      <module>core</module>
+      <module>dao</module>
+      <module>service</module>
+      <module>webapp</module>
+      <module>test-resources</module>
+   </modules>
+
+   <dependencyManagement>
+      <dependencies>
+         <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring-security.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring-security.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+         </dependency>         
+          <dependency>
+              <groupId>org.springframework</groupId>
+              <artifactId>spring-test</artifactId>
+              <version>${spring.version}</version>
+              <scope>test</scope>
+          </dependency>
+          <dependency>
+              <groupId>org.mockito</groupId>
+              <artifactId>mockito-core</artifactId>
+              <version>1.9.5</version>
+              <scope>test</scope>
+          </dependency>
+          <dependency>
+              <groupId>org.hamcrest</groupId>
+              <artifactId>hamcrest-core</artifactId>
+              <version>1.3</version>
+              <scope>test</scope>
+          </dependency>
+          <dependency>
+              <groupId>com.github.springtestdbunit</groupId>
+              <artifactId>spring-test-dbunit</artifactId>
+              <version>1.2.0</version>
+              <scope>test</scope>
+          </dependency>
+          <dependency>
+              <groupId>org.hsqldb</groupId>
+              <artifactId>hsqldb</artifactId>
+              <version>2.3.1</version>
+              <scope>test</scope>
+          </dependency>
+          <dependency>
+              <groupId>org.dbunit</groupId>
+              <artifactId>dbunit</artifactId>
+              <version>2.5.0</version>
+              <type>jar</type>
+              <scope>test</scope>
+          </dependency>
+         <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+    </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>2.5</version>
+         </plugin>
+
+         <plugin>
+            <groupId>com.samaxes.maven</groupId>
+            <artifactId>minify-maven-plugin</artifactId>
+            <version>1.7.4</version>
+         </plugin>
+
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+               <source>1.8</source>
+               <target>1.8</target>
+               <encoding>UTF-8</encoding>
+            </configuration>
+         </plugin>
+
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>3.4</version>
+            <configuration>
+               <linkXRef>true</linkXRef>
+               <targetJdk>1.8</targetJdk>
+               <sourceEncoding>utf-8</sourceEncoding>
+               <includeTests>true</includeTests>
+               <format>html</format>
+               <aggregate>true</aggregate>
+               <skipPmdError>false</skipPmdError>
+               <rulesets>
+                  <ruleset>../tools/checkstyle/god_pmd_ruleset.xml</ruleset>
+               </rulesets>
+            </configuration>
+         </plugin>
+
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jxr-plugin</artifactId>
+            <version>2.3</version>
+         </plugin>
+
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>2.14</version>
+            <configuration>
+               <configLocation>../tools/checkstyle/god_checkstyle.xml</configLocation>
+               <encoding>UTF-8</encoding>
+               <consoleOutput>true</consoleOutput>
+               <failsOnError>true</failsOnError>
+               <linkXRef>false</linkXRef>
+            </configuration>
+         </plugin>
+
+      </plugins>
+   </build>
+
+   <reporting>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>3.4</version>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>2.14</version>
+         </plugin>
+      </plugins>
+   </reporting>
+
+
+   <reports>
+      <report>maven-pmd-plugin</report>
+      <report>>maven-checkstyle-plugin</report>
+   </reports>
+
+   <profiles>
+      <profile>
+         <id>dev</id>
+         <properties>
+            <env>dev</env>
+         </properties>
+      </profile>
+      <profile>
+         <id>test</id>
+         <properties>
+            <env>test</env>
+         </properties>
+      </profile>
+      <profile>
+         <id>sonar</id>
+         <properties>
+            <env>sonar</env>
+         </properties>
+      </profile>
+   </profiles>
+
+</project>

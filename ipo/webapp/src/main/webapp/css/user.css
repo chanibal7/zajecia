@@ -1,0 +1,13 @@
+b.contact{
+   font-size: 16px;
+}
+b.disclaimer{
+   font-size: 16px;
+   color: #808000;
+}
+label#newPassword-error{
+   display:none;
+}
+label#confirmedNewPassword-error{
+   display:none;
+}

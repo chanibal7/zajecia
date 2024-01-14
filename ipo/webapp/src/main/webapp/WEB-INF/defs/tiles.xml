@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="defaultLayout.template" template="/WEB-INF/pages/layout/default-layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/pages/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/pages/layout/menu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/layout/footer.jsp" />
+	</definition>
+
+	<definition name="loginLayout.template" template="/WEB-INF/pages/layout/login-layout.jsp" />
+	<definition name="agreementLayout.template" template="/WEB-INF/pages/layout/agreement-layout.jsp" />
+
+	<definition name="welcome" extends="defaultLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/welcome.jsp" />
+	</definition>
+
+	<definition name="zajeciaUsageAgreement" extends="agreementLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/login/zajeciaUsageAgreement.jsp" />
+	</definition>
+
+	<definition name="contact" extends="defaultLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/contact/contact.jsp" />
+	</definition>
+
+	<definition name="privacy" extends="defaultLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/privacyTermsAndConditions/privacyMain.jsp" />
+	</definition>
+
+	<definition name="login" extends="loginLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/login/login.jsp" />
+	</definition>
+
+	<definition name="reset" extends="loginLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/reset/reset.jsp" />
+	</definition>
+
+	<definition name="reset-repeat" extends="loginLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/reset/reset-repeat.jsp" />
+	</definition>
+
+	<definition name="change-password" extends="defaultLayout.template">
+		<put-attribute name="menu" value="/WEB-INF/pages/reset/menu.jsp" />
+		<put-attribute name="content" value="/WEB-INF/pages/changePassword/changePassword.jsp" />
+	</definition>
+
+	<definition name="reset-done" extends="loginLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/reset/reset-done.jsp" />
+	</definition>
+
+	<definition name="new-password" extends="loginLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/reset/new-password.jsp" />
+	</definition>
+
+	<definition name="invalid-token" extends="loginLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/reset/invalid-token.jsp" />
+	</definition>
+
+	<definition name="set-password" extends="loginLayout.template">
+		<put-attribute name="content" value="/WEB-INF/pages/reset/set-password.jsp" />
+	</definition>
+
+</tiles-definitions>

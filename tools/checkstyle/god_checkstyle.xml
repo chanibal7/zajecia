@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+    Checkstyle-Configuration: Checks
+    Description: none
+-->
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN" "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<module name="Checker">
+    <property name="severity" value="warning"/>
+    <property name="localeLanguage" value="en"/>
+    <module name="TreeWalker">
+        <module name="AvoidStarImport">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="RedundantImport">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="UnusedImports">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="RedundantThrows">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="allowUnchecked" value="true"/>
+            <property name="allowSubclasses" value="true"/>
+        </module>
+        <module name="LeftCurly">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="maxLineLength" value="180"/>
+        </module>
+        <module name="NeedBraces">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ConstantName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="MemberName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="PackageName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="TypeName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ParameterName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="MethodName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="LocalFinalVariableName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="LocalVariableName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="StaticVariableName">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="EmptyBlock">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="option" value="text"/>
+            <property name="tokens" value="LITERAL_CATCH"/>
+        </module>
+        <module name="FallThrough">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="ArrayTypeStyle">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="DefaultComesLast">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="JavadocMethod">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="id" value="MethodJavadocPrivate"/>
+            <property name="allowUndeclaredRTE" value="true"/>
+            <property name="logLoadErrors" value="true"/>
+            <property name="suppressLoadErrors" value="true"/>
+        </module>
+        <module name="JavadocMethod">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="id" value="MethodJavadocPackage"/>
+            <property name="scope" value="package"/>
+            <property name="allowUndeclaredRTE" value="true"/>
+            <property name="logLoadErrors" value="true"/>
+            <property name="suppressLoadErrors" value="true"/>
+        </module>
+        <module name="JavadocStyle">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="id" value="StyleJavadocPrivate"/>
+            <property name="checkEmptyJavadoc" value="true"/>
+        </module>
+        <module name="JavadocStyle">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="id" value="StyleJavadocPackage"/>
+            <property name="scope" value="package"/>
+            <property name="checkEmptyJavadoc" value="true"/>
+        </module>
+        <module name="JavadocVariable">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="id" value="VariableJavadocPrivate"/>
+        </module>
+        <module name="JavadocVariable">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="id" value="VariableJavadocPackage"/>
+            <property name="scope" value="package"/>
+        </module>
+        <module name="IllegalImport">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="illegalPkgs" value="sun, java.lang"/>
+        </module>
+        <module name="AnonInnerLength">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+            <property name="max" value="30"/>
+        </module>
+        <module name="ParameterNumber">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="max" value="5"/>
+        </module>
+        <module name="NoWhitespaceAfter">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="NoWhitespaceBefore">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="MethodParamPad">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ParenPad">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="WhitespaceAfter">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="WhitespaceAround">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ModifierOrder">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="AvoidNestedBlocks">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="allowInSwitchCase" value="true"/>
+        </module>
+        <module name="LeftCurly">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="option" value="nl"/>
+            <property name="maxLineLength" value="180"/>
+        </module>
+        <module name="DeclarationOrder">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="EmptyStatement">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="EqualsHashCode">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="HiddenField">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="IllegalCatch">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="IllegalThrows">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="InnerAssignment">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="JUnitTestCase">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="MagicNumber">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+            <property name="ignoreNumbers" value="-1, 0, 1"/>
+        </module>
+        <module name="MissingCtor">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="MissingSwitchDefault">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ModifiedControlVariable">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="MultipleVariableDeclarations">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="NestedIfDepth">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.customMessage" value="Code is too complicated. Try to avoid nested if-blocks!"/>
+            <property name="max" value="2"/>
+        </module>
+        <module name="NestedTryDepth">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="PackageDeclaration">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ReturnCount">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+            <property name="max" value="3"/>
+        </module>
+        <module name="SimplifyBooleanExpression">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="SimplifyBooleanReturn">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="StringLiteralEquality">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="SuperClone">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="SuperFinalize">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="FinalClass">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="HideUtilityClassConstructor">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="MutableException">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="ThrowsCount">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="VisibilityModifier">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="protectedAllowed" value="true"/>
+        </module>
+        <module name="CyclomaticComplexity">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="JavaNCSS">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        </module>
+        <module name="NPathComplexity">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="info"/>
+        </module>
+        <module name="UncommentedMain">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+            <property name="severity" value="error"/>
+        </module>
+    </module>
+    <module name="FileLength">
+        <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        <property name="fileExtensions" value="java"/>
+    </module>
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+        <property name="fileExtensions" value="java"/>
+    </module>
+    <module name="SeverityMatchFilter">
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="StrictDuplicateCode">
+        <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        <property name="severity" value="info"/>
+    </module>
+    <module name="Translation">
+        <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Guideline"/>
+        <property name="severity" value="error"/>
+    </module>
+</module>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+     <USER_PROFILE ID="1" TOKEN="32235235235235235"  FIRST_NAME="Jaś" LAST_NAME="Fasola" EMAIL="s.muller@test-email.com" PASSWORD="334e122845a2f1485fbad93bb4173a168aea237d0499e99c8340caeef66632a650d2ca4ccaa9b6d04829ac22e87caeb8272c140d2e683967d9670cb8c840ebeb" SALT="2677429663" ACTIVE="true" IS_CONSULTANT="false"/>
+   
+        <ROLE ID="1" NAME="ROLE_ADMIN" MESSAGE_KEY="role.system_administrator"/>
+    <USER_ROLE USER_ID="1" ROLE_ID="1"/>
+</dataset>
